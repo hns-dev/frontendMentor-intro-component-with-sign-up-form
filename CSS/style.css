@@ -70,8 +70,9 @@ section a.btn {
   font-size: 14px;
   font-weight: 500;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 section a.btn small {
@@ -81,16 +82,38 @@ section a.btn small {
 section form {
   margin: 1.2em 0;
   background: white;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1.5em;
-  -webkit-box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 3px 2px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+section form .form-control {
+  position: relative;
+}
+
+section form .error-icon {
+  visibility: hidden;
+  position: absolute;
+  top: 34%;
+  right: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+section form .error-msg {
+  color: #ff7a7a;
+  font-size: 12px;
+  text-align: right;
+  font-style: italic;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 section form input {
   width: 100%;
   padding: 1.1em 1em;
-  margin-bottom: 1.2em;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #3e3c49;
@@ -105,6 +128,8 @@ section form .btn {
   font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 14px;
+  -webkit-box-shadow: inset 0 3px 2px 0 rgba(56, 204, 140, 0.8);
+          box-shadow: inset 0 3px 2px 0 rgba(56, 204, 140, 0.8);
 }
 
 section form p {

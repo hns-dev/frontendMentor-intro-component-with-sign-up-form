@@ -23,12 +23,31 @@
     
       <a href="#" class="btn">Try it free 7 days <small>then $20/mo. thereafter</small></a>
     
-      <form>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
-    
+      <form novalidate>
+        <div class="form-control">
+          <input type="text" placeholder="First Name" id="first-name" required>
+          <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+          <span class="error-msg fname" aria-live="polite"></span>
+        </div>
+
+        <div class="form-control">
+          <input type="text" placeholder="Last Name" id="last-name" required>
+          <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+          <span class="error-msg lname" aria-live="polite"></span>
+        </div>
+
+        <div class="form-control">
+          <input type="email" placeholder="Email Address" id="mail" required>
+          <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+          <span class="error-msg email" aria-live="polite"></span>
+        </div>
+        
+        <div class="form-control">
+          <input type="password" placeholder="Password" id="password" required>
+          <img src="images/icon-error.svg" alt="error icon" class="error-icon">
+          <span class="error-msg password" aria-live="polite"></span>
+        </div>
+
         <button class="btn">Claim your free trial </button>
         <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
       </form>
