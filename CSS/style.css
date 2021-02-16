@@ -39,7 +39,7 @@ body {
 section {
   background: #ff7a7a url("../images/bg-intro-mobile.png");
   text-align: center;
-  padding: 4em 0;
+  padding: 4em 0 0;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,9 +162,7 @@ section form p a {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  padding: 0.5em 0;
+  margin: 4em 0 0.5em;
 }
 
 .attribution {
@@ -199,9 +197,6 @@ footer {
 }
 
 @media (min-width: 1010px) {
-  section {
-    padding: 4em 0;
-  }
   section .container {
     width: 80%;
     display: -ms-grid;
