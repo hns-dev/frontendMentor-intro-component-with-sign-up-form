@@ -14,17 +14,18 @@ a {
 
 .btn {
   display: inline-block;
+  outline: none;
   border: none;
   border-radius: 5px;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
   background: #38cc8c;
   color: #ffffff;
   cursor: pointer;
   text-align: center;
-  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+  -webkit-transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease;
+  transition: all 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -37,7 +38,8 @@ body {
 }
 
 section {
-  background: #ff7a7a url("../images/bg-intro-mobile.png");
+  background: #ff7a7a url("../images/bg-intro-mobile.png") no-repeat;
+  background-size: cover;
   text-align: center;
   padding: 4em 0 0;
   min-height: 100vh;
@@ -95,6 +97,10 @@ section a.btn small {
   font-weight: 400;
 }
 
+section a.btn:hover {
+  background: #7569c3;
+}
+
 section form {
   margin: 1.2em 0;
   background: white;
@@ -129,7 +135,8 @@ section form .error-msg {
 
 section form input {
   width: 100%;
-  padding: 1.1em 1em;
+  padding: 1.1em 1.5em;
+  outline: none;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: #3e3c49;
@@ -138,14 +145,37 @@ section form input {
   font-family: "Poppins";
 }
 
+section form input:focus {
+  border: 1px solid #3e3c49;
+}
+
+section form input:-webkit-autofill,
+section form input:-webkit-autofill:hover,
+section form input:-webkit-autofill:focus,
+section form textarea:-webkit-autofill,
+section form textarea:-webkit-autofill:hover,
+section form textarea:-webkit-autofill:focus,
+section form select:-webkit-autofill,
+section form select:-webkit-autofill:hover,
+section form select:-webkit-autofill:focus,
+section form input:valid {
+  border: 1px solid #3e3c49;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 section form .btn {
   width: 100%;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
   font-size: 14px;
-  -webkit-box-shadow: inset 0 3px 2px 0 rgba(56, 204, 140, 0.8);
-          box-shadow: inset 0 3px 2px 0 rgba(56, 204, 140, 0.8);
+  -webkit-box-shadow: inset 0 -5px 1.5px 1px #3fab7c;
+          box-shadow: inset 0 -5px 1.5px 1px #3fab7c;
+}
+
+section form .btn:hover {
+  background: #46be8a;
 }
 
 section form p {
@@ -197,6 +227,10 @@ footer {
 }
 
 @media (min-width: 1010px) {
+  section {
+    background: #ff7a7a url("../images/bg-intro-desktop.png") no-repeat;
+    background-size: cover;
+  }
   section .container {
     width: 80%;
     display: -ms-grid;
@@ -228,6 +262,9 @@ footer {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
+  }
+  section form {
+    padding: 2em;
   }
   section footer {
     -ms-grid-column: 1;
