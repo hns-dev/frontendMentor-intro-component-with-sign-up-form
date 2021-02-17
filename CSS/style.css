@@ -217,6 +217,10 @@ footer {
 }
 
 @media (min-width: 720px) {
+  section {
+    background: #ff7a7a url("../images/bg-intro-desktop.png") no-repeat;
+    background-size: cover;
+  }
   section .container {
     width: 65%;
   }
@@ -227,10 +231,6 @@ footer {
 }
 
 @media (min-width: 1010px) {
-  section {
-    background: #ff7a7a url("../images/bg-intro-desktop.png") no-repeat;
-    background-size: cover;
-  }
   section .container {
     width: 80%;
     display: -ms-grid;

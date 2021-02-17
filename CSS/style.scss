@@ -236,6 +236,8 @@ footer {
 
 @media (min-width: 720px) {
   section {
+    background: $red url("../images/bg-intro-desktop.png") no-repeat;
+    background-size: cover;
     .container {
       width: 65%;
     }
@@ -251,8 +253,6 @@ footer {
 
 @media (min-width: 1010px) {
   section {
-    background: $red url("../images/bg-intro-desktop.png") no-repeat;
-    background-size: cover;
     .container {
       width: 80%;
 
